@@ -1,1 +1,19 @@
+body{
+    background-color: black;
+    background-color: rgb(0,0,0);
+}
+
+.r{
+    background-color: #ff0000;
+}
+.g{
+    /* background-color: rgb(0, 255, 0); */
+    background-color: #00FF00;
+}
+.b{
+    background-color: rgba(0, 0, 255, 1);
+}
+
+.hsla{
+    background-color: hsla(120, 100%, 50%, 0.5);
 }
