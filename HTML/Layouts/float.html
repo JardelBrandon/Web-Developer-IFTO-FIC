@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floating</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      padding: 30px;
+    }
+    #dad{
+      /*min-height: 300px;*/
+      width: 90%;
+      margin: auto;
+      background-color: gainsboro;
+      padding: 5px;
+      float: left;
+    }
+    .son{
+      border: 5px solid red;
+      width: 100px;
+      height: 100px;
+      margin: 15px auto;
+      display: block;
+    }
+    .son4{
+      width: 80%;
+      height: 300%;
+      text-align: justify;
+      padding: 10px;
+    }
+    .logo{
+      width: 60px;
+      float: right;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="dad">
+    <div class="son son1">
+      Son 1
+    </div>
+    <div class="son son2">
+      Son 2
+    </div>
+    <span class="son son3">
+      Son 3
+    </span>
+    <span class="son son4">
+      <img class="logo" src="/CSS/images/batman-logo.png" alt="">
+
+      Son 4 <br>
+      Lorem Ipsum: Lectus delectus deterruisset vidisse nam vivendo detraxit.
+      Dis imperdiet dictum brute mazim decore dicat meliore hendrerit sociosqu. Adolescens maiorum fuisset molestie quod saepe pulvinar accommodare quisque dicam.
+    </span>
+
+  </div>
+</body>
+</html>
