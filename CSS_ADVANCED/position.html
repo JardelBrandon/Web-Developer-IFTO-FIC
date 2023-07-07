@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posicionando Elementos</title>
+    <style>
+        body{
+            height: 100%;
+            background-color: gainsboro;
+            padding: 50px;
+            margin: 0;
+        }
+        #board{
+            background-color: black;
+            margin: auto;
+            width: 300px;
+            margin: 10px 0;
+            position: relative;
+        }
+        #board>div{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #board>div:nth-child(2){
+            background-color: red;
+            position: relative;
+            /*top | bottom*/
+            top: -20px;
+            /*left | right*/
+            right: 10px;
+        }
+        #board>div:nth-child(3){
+            background-color: green;
+            position: fixed;
+            width: 100%;
+            /*top | bottom*/
+            top: 0;
+            /*left | right*/
+            left: 0;
+            margin: 0;
+            z-index: -1;
+        }
+        #board>div:nth-child(4){
+            background-color: green;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /*top | bottom*/
+            bottom: 10px;
+            /*left | right*/
+            right: 10px;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="board">
+        <div>static</div>
+        <div>relative</div>
+        <div>fixed</div>
+        <div>absolute</div>
+    </div>
+</body>
+</html>

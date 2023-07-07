@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baralho de Cartas</title>
+    <style>
+      .card{
+        --diamondsuit: orange;
+        --hearts: red;
+        --clubs: black;
+        --spades: black;
+        border: 5px solid;
+        width: 200px;
+        height: 300px;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        background-color: white;
+        z-index: 1;
+      }
+      .card>span{
+        padding: 10px;
+      }
+      .card>span:nth-child(2){
+        font-size: 100px;
+        text-align: center;
+      }
+      .card>span:last-child{
+        transform: rotate(180deg);
+      }
+      .card.hearts{
+        color: var(--hearts);
+        top: 100px;
+        left: 100px;
+      }
+      .card.spades{
+        color: var(--spades);
+        top: 200px;
+        left: 200px;
+      }
+      .card.diamonds{
+        color: var(--diamondsuit);
+        top: 300px;
+        left: 300px;
+      }
+      .card.clubs{
+        color: var(--clubs);
+        top: 400px;
+        left: 400px;
+      }
+      .card:hover{
+          z-index: 2;
+          cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+    <div class="card hearts">
+      <span>A&hearts;</span>
+      <span> &hearts;</span>
+      <span>A&hearts;</span>
+    </div>
+    <div class="card spades">
+      <span>A&spades;</span>
+      <span> &spades;</span>
+      <span>A&spades;</span>
+    </div>
+    <div class="card diamonds">
+      <span>A&diamondsuit;</span>
+      <span>&diamondsuit;</span>
+      <span>A&diamondsuit;</span>
+    </div>
+    <div class="card clubs">
+      <span>A&clubs;</span>
+      <span>&clubs;</span>
+      <span>A&clubs;</span>
+    </div>
+</body>
+</html>
