@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradiente - Login</title>
+    <style>
+        .login{
+            width: 300px;
+            height: 250px;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #141922;
+            /*background: linear-gradient(to right, #141922 0 10%, blue);*/
+        }
+        .content{
+            background-color: #333333;
+            height: calc(100% - 10px);
+            width: calc(100% - 10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 5px;
+            position: absolute;
+            z-index: 2;
+        }
+        h3{
+            color: white;
+        }
+        .login::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 560px;
+            height: 50px;
+            background: linear-gradient(to right, #56E8F2, #2F80ED);
+            transform: rotate(320deg) translateY(-100px);
+            z-index: 1;
+        }
+        .login:hover::after{
+            animation: move-edge 1.5s ease;
+        }
+        @keyframes move-edge {
+            from{
+                transform: rotate(320deg) translateY(-100px);
+            }
+            to{
+                transform: rotate(320deg) translateY(400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="content">
+            <h3>Login</h3>
+            <input type="text" name="login" placeholder="Login" id="login">
+            <input type="password" name="password" placeholder="Senha"  id="password">
+            <button type="submit">Entrar</button>
+        </div>
+    </div>
+</body>
+</html>

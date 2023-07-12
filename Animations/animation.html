@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flag Brazil Animation</title>
+    <style>
+        .flag{
+            width: 250px;
+            height: 150px;
+            animation: move 2s linear;
+        }
+        .flag.brazil{
+            background-color: green;
+            position: fixed;
+            top: 20px;
+            left: calc(50% - 125px);
+        }
+        .brazil>.diamond{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .brazil>.diamond::before, .brazil>.diamond::after{
+            content: '';
+            position: absolute;
+            border-left: 105px solid transparent;
+            border-right: 105px solid transparent;
+            left: 20px;
+        }
+        .brazil>.diamond::before {
+            border-bottom: 65px solid #FFE11F;
+            top: 10px;
+        }.brazil>.diamond::after {
+            border-top: 65px solid #FFE11F;
+            bottom: 10px;
+        }
+         .brazil>.diamond>.circle{
+             width: 0;
+             height: 0;
+             background-color: #1651B8;
+             position: absolute;
+             top: calc(50% - 40px);
+             left: calc(50% - 40px);
+             z-index: 2;
+             border-radius: 50%;
+             overflow: hidden;
+             animation-name: grow;
+             animation-duration: 2s;
+             animation-timing-function: linear;
+             animation-delay: 2s;
+             animation-fill-mode: forwards;
+         }
+         .brazil>.diamond>.circle::before, .brazil>.diamond>.circle::after {
+             content: '';
+             top: 50%;
+             left: 50%;
+             width: 90px;
+             height: 40px;
+             position: absolute;
+             border-radius: 50%;
+             transform: rotate(14deg);
+         }
+         .brazil>.diamond>.circle::before{
+             margin-left: -45px;
+             margin-top: -20px;
+             background-color: white;
+             animation: appear 2s linear 4s infinite alternate;
+         }
+         .brazil>.diamond>.circle::after{
+             margin-left: -48px;
+             margin-top: -10px;
+             background-color: #1651B8;
+         }
+         @keyframes appear {
+             from{
+                 background-color: #FFFFFF00;
+             }
+             to{
+                 background-color: #FFFFFFFF;
+             }
+         }
+         @keyframes grow {
+             0%{
+                 width: 0;
+                 height: 0;
+             }
+             50%{
+                 width: 40px;
+                 height: 40px;
+             }
+             100%{
+                 width: 80px;
+                 height: 80px;
+             }
+         }
+         @keyframes move {
+             0%{
+                 top: 100%;
+             }
+             33%{
+                 top: 66%;
+             }
+             66%{
+                 top: 33%;
+             }
+             100%{
+                 top: 20px;
+             }
+         }
+    </style>
+</head>
+<body>
+    <div class="flag brazil">
+        <div class="diamond">
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+</html>
